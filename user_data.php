@@ -1,7 +1,10 @@
 <?php
+
+
 $catalogue = array(
     1 => array('article' => 'Legging Marron',
-    'categorie' => 'Legging', 'genre' => 'feminin', 'prix' => '12$', 'description' => 'Ideal pour sortie du weekend', 'image' => 'legging1',),
+        'categorie' => 'Legging', 'genre' => 'feminin', 'prix' => '12$', 'description' => 'Ideal pour sortie du weekend', 'image' => 'legging1',),
+
     2 => array('article' => 'Legging Rayé',
         'categorie' => 'Legging', 'genre' => 'feminin', 'prix' => '12$', 'description' => 'Ideal pour sortie du weekend', 'image' => 'legging2',),
     3 => array('article' => 'Veste grise',

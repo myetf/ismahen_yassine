@@ -8,7 +8,11 @@
 
 ?>
 
+
 <div id="menu_icons">
+=======
+<div id="#sub_menu">
+
     <div class="container">
         <div class="row"><!--row petit icons-->
             <div class="slogan col-3 col-m-1">Logo</div>

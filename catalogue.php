@@ -1,4 +1,6 @@
 <?php
+
+
 require_once 'defines.php';
 include 'user_data.php';
 $page_title = 'Catalogue';
@@ -14,8 +16,12 @@ $categorie = '';
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
+
+include 'user_data.php';
+
 ?>
 <main>
+
 <!--    <h2>Ceci est le main de la page catalogue</h2>-->
 <!--    <ul>-->
 <!--        <li><a href="?categorie=Pull">Pull</a></li>-->
@@ -44,6 +50,7 @@ require_once 'views/aside.php';
                     <?php }
                     ?>
                 </div>
+
             </div>
         </section>
     </div>
