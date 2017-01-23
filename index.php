@@ -10,6 +10,7 @@ require_once 'views/aside.php';
 ?>
 <main>
     <h2>Ceci est le main de l'accueil</h2>
+
 </main>
 <?php
 require_once 'views/footer.php';

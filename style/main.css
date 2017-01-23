@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+}
+aside, div, section, header, footer, nav {
+    display: block;
+}
+html, body, #wrapper, article{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+body {
+    margin: 0 auto;
+    background-color: #e8edde;
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+#wrapper{
+    width: 100%;
+    margin:0 auto;
+
+}
+.container{
+    width: 80%;
+    margin:0 auto;
+}
+/* -----------------------------Grille desktop*/
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%; }
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%; }
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 0 15px;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*     --------------------------------------     Header   ------------------------------------     */
+.active{
+    border-bottom: 5px solid black;
+}
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, p{
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    line-height: 18px;
+    padding : 2% 0 5% 0;
+}
+
+/*navigation*/
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 3%;
+}
+#menu li {
+    float: left;
+    width: 25%;
+}
+#menu li + li{
+    border-left: 1px solid #fff;
+}
+#menu a {
+    display: block;
+    line-height: 40px;
+    color:#fff;
+    height: 40px;
+    background-color: gray;
+    text-align:center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#menu a:hover{
+    background-color:red;
+}
+
+
+/*     -------------------------------------- Catalgoue ---------------------------------------------*/
+.btn_detail{
+    background-color:gray;
+    color:white;
+}
+/*animation photo*/
+.images img:hover{
+    -webkit-animation-name: anima;
+    animation-name: anima;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+}
+@-webkit-keyframes  anima{
+    25%{
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.4, 1.4);
+    }
+}
+
+.cont_cat{
+    width: 100%;
+    margin: 0 auto;
+    background-color:#FFFFFF;
+}
+.gal_prod{
+    padding: 0;
+}
+.row.images{
+    padding: 0 15px;
+}
+.gal_prod h1{
+    background-color:  #fed39a;
+    font-size: 1.5rem;
+    padding-left: 3%;
+    width: 100%;
+}
+.row.images_cat {
+    padding: 0.5% 0.5% 2% 0;
+}
+img.img_cat {
+    width: 100%;
+    padding: 0;
+}
+.info_cat{
+    background-color: #fff;
+    padding: 0;
+    margin-bottom: 50px;
+}
+section .info_cat h4{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-left: 35%;
+    color: #FFFFFF;
+}
+section .info_cat a{
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 600;
+    float: right;
+    background-color:gray ;
+    width:20%;
+
+}
+section .info_cat a:hover{
+    background-color: darkgrey;
+    color: gray;
+}
+.info_cat h3{
+    font-size: 1.2rem;
+    padding: 2% 4% 2% 4%;
+    color: dimgray;
+}
+.info_cat p{
+    font-size: 0.8rem;
+    padding: 0 4% 2% 4%;
+}
+
+
+
+
+
+/*     --------------------------------------     section footer   ------------------------------------  */
+
+.contact_footer{
+    padding: 2% 0 2% 0;
+    color: #9d9995;
+    text-transform: uppercase;
+    background-color: lavender;
+
+}
+
+
+
+.copyright{
+    background-color:gray ;
+    min-height: 50px;
+    text-align: center;
+    padding: 1%;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+
+/*@media 960 version tablettes -----------------------------------------------------------------------------------*/
+@media only screen and (max-width:960px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+
+    /*------------------   @media 960 index    -------------------------------------------------------------------*/
+    .container{
+        width: 100%;
+        margin:0 auto;
+    }
+
+
+/*@media 768 -----------------------------------------------------------------------------------*/
+@media only screen and (max-width:768px) {
+
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    /*------------------   @media 768 index    -------------------------------------------------------------------*/
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    body {
+        margin: 0 auto;
+        background: none;
+    }
+}}
