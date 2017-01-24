@@ -31,7 +31,6 @@
                     </ul>
                 </div>
             </div>
-            <!--</div>&lt;!&ndash;fin menu&ndash;&gt;-->
         </div><!--fin section menu-->
     </div><!--fin container-->
 </div>

@@ -26,23 +26,24 @@ include 'user_data.php';
                 </figure>
             </article>
 
-            <!--<div class="row banner">
-                <div class="row main_art col-4 col-m-6">
-                    <img class="img_main col-3" src="images/soiree.jpeg" alt="">
+            <div class="row banner">
+                <div class="row main_art col-3 col-m-6">
+                    <img class="img_main col-4" src="images/soiree.jpeg" alt="">
                     <div class="infos col-3">
                         <h3>Découvrez en exclusivités</h3>
                         <p>le legging</p>
                     </div>
                 </div>
-                <div class="row main_art col-4 col-m-6">
-                    <img class="img_main col-3" src="images/soiree2.jpeg">
+                <div class="row main_art col-3 col-m-6">
+                    <img class="img_main col-4" src="images/soiree2.jpeg" alt="">
                     <div class="infos col-3">
                         <h3>Découvrez en exclusivités</h3>
                         <p>le legging</p>
                     </div>
                 </div>
+
             </div><!--fin produits vedette-->
-            <!--</section>-->
+            </section>
             <!--   -------------------------------------------------------------  section main (new prod)  -->
 
             <section class="cat_articles row">
