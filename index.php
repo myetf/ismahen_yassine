@@ -8,11 +8,6 @@ require_once 'views/header.php';
 require_once 'views/aside.php';
 include 'user_data.php';
 ?>
-<main>
-    <h2>Ceci est le main de l'accueil</h2>
-
-</main>
-=======
 
     <!--   ---------------------------------------------------------------     section main (slide)  -->
 
@@ -72,7 +67,15 @@ include 'user_data.php';
                 <div class="aside col-2 col-m-4">
                     <h4>L'actualité du moment</h4>
                     <p>Découvrez tous les évènements de cette semaine</p>
-                </div><!--fin produits vedette-->
+                </div>
+                <div class="aside col-2 col-m-4">
+                    <h4>L'actualité du moment</h4>
+                    <p>Découvrez tous les évènements de cette semaine</p>
+                </div>
+                <div class="aside col-2 col-m-4">
+                    <h4>L'actualité du moment</h4>
+                    <p>Découvrez tous les évènements de cette semaine</p>
+                </div>
             </section><!--fin main_nouveau_prod-->
         </section>
     </div><!--fin container main -->
