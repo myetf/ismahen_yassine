@@ -2,14 +2,17 @@
 require_once 'defines.php';
 $page_title = 'Accueil';
 ?>
-
 <?php
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
 include 'user_data.php';
-
 ?>
+<main>
+    <h2>Ceci est le main de l'accueil</h2>
+
+</main>
+=======
 
     <!--   ---------------------------------------------------------------     section main (slide)  -->
 
@@ -54,7 +57,7 @@ include 'user_data.php';
                                 <a href="#"><img class="img_art col-6" src="images/<?= $article['image'] ?>.jpeg" alt=""></a>
 
                                 <div class="text_articles">
-                                    <h3><a href="<? $article['article'] ?>">Découvrez en exclusivités</a></h3>
+                                    <h3><a href="<? $article['nom'] ?>">Découvrez en exclusivités</a></h3>
                                     <p><? $article['Description'] ?></p>
                                 </div>
                             </li>
@@ -73,7 +76,6 @@ include 'user_data.php';
             </section><!--fin main_nouveau_prod-->
         </section>
     </div><!--fin container main -->
-
 
 <?php
 require_once 'views/footer.php';
