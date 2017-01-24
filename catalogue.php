@@ -1,10 +1,20 @@
 <?php
+/** Initialisation du panier */
+session_start();
+/* Initialisation du panier */
+$_SESSION['panier'] = array();
 
 
+require_once('conn.php');
 require_once 'defines.php';
-include 'user_data.php';
+//include 'user_data.php';
 $page_title = 'Catalogue';
-$categorie = '';
+//$categorie = '';
+$articles = get_article_list();
+// Sélectionner tous les items d'une catégorie en particulier
+$articles_cat2 = get_article_list(2);
+// Sélectionner toutes les catégories de articles
+$categories = get_categories();
 
 //$categorie=$_GET['categorie'];
 //$array = array('a'=>1, 'b'=>2, 'c'=>3);
@@ -16,8 +26,6 @@ $categorie = '';
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
-
-include 'user_data.php';
 
 ?>
 <main>
@@ -34,18 +42,29 @@ include 'user_data.php';
             <div class="cont_cat">
                 <div class="row images col-12">
                     <?php
-                    foreach ($catalogue as $article) { ?>
-                        <div class="row  col-4 col-m-6">
-                            <a href="detail.html"> <img class="img_cat col-6" src="images/<?= $article['image'] ?>.jpeg"
+                    foreach ($articles as $article) { ?>
+                        <div class="col-4 col-m-6">
+                            <a class="example-image-link" data-title="<?= $article['nom'] ?>"  data-lightbox="example-<?= $article['id'] ?>" href="images/<?= $article['image'] ?>"><img class="img_cat col-6 example-image" src="images/<?= $article['image'] ?>"
                                                         alt="<?= $article['description'] ?>"></a>
                             <div class="info_cat">
-                                <h3><?= $article['article'] ?></h3>
+                                <h3><?= $article['nom'] ?></h3>
                                 <p><?= $article['description'] ?></p>
                                 <div class="btn_detail">
-                                    <h4><?= $article['prix'] ?></h4>
-                                    <a href="detail.html"><span class="fa fa-shopping-cart"></span></a>
+                                    <a href="#modal<?= $article['id'] ?>"><span class="fa fa-shopping-cart"></span><?= $article['prix'] ?>$</a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="remodal" data-remodal-id="modal<?= $article['id'] ?>" role="dialog" aria-labelledby="modal<?= $article['id'] ?>Title" aria-describedby="modal<?= $article['id'] ?>Desc">
+                            <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+                            <div>
+                                <h2 id="modal<?= $article['id'] ?>Title"><?= $article['nom'] ?></h2>
+                                <p id="modal<?= $article['id'] ?>Desc">
+                                    Combien d'article désirez vous?
+                                </p>
+                            </div>
+                            <br>
+                            <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+                            <button data-remodal-action="confirm" class="remodal-confirm">Ajouter au Panier</button>
                         </div>
                     <?php }
                     ?>
