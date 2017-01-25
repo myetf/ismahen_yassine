@@ -2,8 +2,8 @@
 // Connection
 // Constantes rassemblant les infos de connexion et de schéma de la DB
 define('CONN_HOST', '127.0.0.1');
-define('CONN_USER', 'yassine88');
-define('CONN_PWD', 'Yassine88');
+define('CONN_USER', 'root');
+define('CONN_PWD', '');
 define('DBNAME', 'yassine88');
 
 $mysqli = new mysqli(CONN_HOST, CONN_USER, CONN_PWD, DBNAME);

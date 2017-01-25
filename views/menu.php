@@ -10,20 +10,8 @@
 <div id="" class="">
     <div class="container">
         <div class="row"><!-- section menu-->
-            <div class="logo_test col-4">
-            </div>
 
-            <!--Menu hamburger-->
-            <div class="mobile-nav col-8" >
-                <div class="menu-btn" id="menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-
-
-                <div id="menu" class="responsive-menu col-10">
+                <div id="menu" class="responsive-menu col-7">
                     <ul>
                         <li class="<?php if($page_title== 'Accueil'){
                             echo 'active'; } ?> "><a href="index.php">Index</a></li>
@@ -33,10 +21,13 @@
                             echo 'active'; } ?>"><a href="details.php">Détails</a></li>
                         <li class="<?php if ($page_title == 'Contact'){
                             echo 'active'; } ?>"><a href="contact.php">Contact</a></li>
-
-
-
                     </ul>
+                </div>
+                <div class="search col-3 col-m-3">
+                    <form action="" method="post" id="search_mini_form">
+                        <input type="search" name="text" id="" value="" placeholder="Rechercher">
+                        <a href="catalogue.php"><img class="col-2" src="images/loupe.svg" alt="loupe"></a>
+                    </form>
                 </div>
             </div>
         </div><!--fin section menu-->

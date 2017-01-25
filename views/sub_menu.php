@@ -15,19 +15,13 @@
     <div class="container">
         <div class="row"><!--row petit icons-->
             <div class="slogan col-3 col-m-1">Logo</div>
-
-
-            <div class="search col-3 col-m-3">
-                <form action="" method="post" id="search_mini_form">
-                    <input type="search" name="text" id="" value="" placeholder="Rechercher">
-                    <a href="catalogue.php"><span class="fa fa-search"></span></a>
-                </form>
-            </div>
             <div class="user col-3 col-m-3">
-                <a href="compte.php"><span class="fa fa-user"></span>  Mon compte</a>
+
+                <a href="compte.php"><img class="col-4" src="images/compte.svg" alt="compte"> Mon compte</a>
             </div>
             <div class="panier col-3 col-m-3">
-                <a href="#"><span class="fa fa-shopping-cart"></span>  Mon panier</a>
+
+                <a href="#"><img class="col-4" src="images/panier.svg" alt="panier">Mon panier</a>
             </div>
 
         </div><!--fin row petit icons-->
