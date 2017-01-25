@@ -3,6 +3,7 @@ require_once 'defines.php';
 $page_title = 'Accueil';
 ?>
 <?php
+require_once 'check_connect.php';
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
@@ -10,6 +11,8 @@ include 'user_data.php';
 ?>
 
     <!--   ---------------------------------------------------------------     section main (slide)  -->
+
+
 
     <div class="container"><!--container main-->
         <section class="main row">
@@ -44,22 +47,55 @@ include 'user_data.php';
             </section>
             <!--   -------------------------------------------------------------  section main (new prod)  -->
 
-            <section class="cat_articles row">
-                <article class="articles_items col-10 col-m-12">
+            <section class="cat_articles row col-10">
+                <div class="row">
+                <article class="articles_items col-4 col-m-12">
                     <ul>
                         <?php foreach ($catalogue as $article){ ?>
                             <li class="row art_ind col-4 col-m-12">
                                 <a href="#"><img class="img_art col-6" src="images/<?= $article['image'] ?>.jpeg" alt=""></a>
 
-                                <div class="text_articles">
+                                <div class="col-3 text_articles">
                                     <h3><a href="<? $article['nom'] ?>">Découvrez en exclusivités</a></h3>
-                                    <p><? $article['Description'] ?></p>
+                                    <p class="col-3"><? $article['Description'] ?></p>
                                 </div>
                             </li>
                       <?php  } ?>
 
                     </ul>
                 </article>
+                    <article class="articles_items col-4 col-m-12">
+                        <ul>
+                            <?php foreach ($catalogue as $article){ ?>
+                                <li class="row art_ind col-4 col-m-12">
+                                    <a href="#"><img class="img_art col-6" src="images/<?= $article['image'] ?>.jpeg" alt=""></a>
+
+                                    <div class="col-3 text_articles">
+                                        <h3><a href="<? $article['nom'] ?>">Découvrez en exclusivités</a></h3>
+                                        <p class="col-3"><? $article['Description'] ?></p>
+                                    </div>
+                                </li>
+                            <?php  } ?>
+
+                        </ul>
+                    </article>
+                    <article class="articles_items col-4 col-m-12">
+                        <ul>
+                            <?php foreach ($catalogue as $article){ ?>
+                                <li class="row art_ind col-4 col-m-12">
+                                    <a href="#"><img class="img_art col-6" src="images/<?= $article['image'] ?>.jpeg" alt=""></a>
+
+                                    <div class="col-3 text_articles">
+                                        <h3><a href="<? $article['nom'] ?>">Découvrez en exclusivités</a></h3>
+                                        <p class="col-3"><? $article['Description'] ?></p>
+                                    </div>
+                                </li>
+                            <?php  } ?>
+
+                        </ul>
+                    </article>
+                </div>
+            </section>
                 <div class="aside col-2 col-m-4">
                     <h4>L'actualité du moment</h4>
                     <p>Découvrez tous les évènements de cette semaine</p>
@@ -76,8 +112,8 @@ include 'user_data.php';
                     <h4>L'actualité du moment</h4>
                     <p>Découvrez tous les évènements de cette semaine</p>
                 </div>
-            </section><!--fin main_nouveau_prod-->
-        </section>
+
+
     </div><!--fin container main -->
 
 <?php
