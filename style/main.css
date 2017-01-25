@@ -83,7 +83,7 @@ p{
 
 /*     --------------------------------------     sous menu    ------------------------------------     */
 .icon{
-    padding: 0;
+    padding: 10px;
 }
 #sub_menu{
     background-color: gray;
@@ -92,14 +92,12 @@ p{
     width: 100%;
     z-index: 1001;
 }
-#sub_menu span{
-    font-size: 1rem;
-}
+
 #sub_menu .user, .panier, .search{
     color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 input[type="search"] {
     width: 90%;
@@ -115,11 +113,12 @@ input[type="search"] {
 form#search_mini_form {
     width: 100%;
 }
-.search span{
-    font-size: 1rem;
+img[alt=loupe]{
+    font-size: 2rem;
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    top: 45px;
     margin: 0.1% 0 0 -1.4%;
 }
 
@@ -162,6 +161,106 @@ form#search_mini_form {
 }
 #menu a:hover{
     background-color:red;
+}
+
+
+/*------------------------------------------------- FORMULAIRE  ismahen  ----------------------------------------------*/
+form{
+    width: 60%;
+    margin: 0 auto;
+}
+label, input[type=text], #is_email, input[type=tel], input[type=file], input[type=number]{
+    color: black;
+    font-size: 0.8rem;
+    /*font-weight: bold;*/
+    border-radius: 7px 7px 7px 7px;
+    /*margin-left: 50px;*/
+    margin-top: 10px;
+    height: 30px;
+    width: 250px;
+    letter-spacing: inherit;
+}
+input[type=text], #is_email, input[type=tel], input[type=file], input[type=number]{
+    box-shadow: 7px 7px 7px #4c5940;
+}
+label[for=produits_dispo]{
+    /*margin-left: 50px;*/
+    margin-top: 10px;
+}
+#autres_pd{
+    width: 250px;
+    box-shadow: 7px 7px 7px #4c5940;
+    border-radius: 7px 7px 7px 7px;
+}
+label[for=gift], label[for=perso]{
+    /*margin-left: 50px;*/
+    /*margin-top: 10px;*/
+}
+
+select[name=autres_pd]{
+    /*margin-left: 50px;*/
+    margin-top: 10px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 7px 7px 7px #4c5940;
+}
+
+input[type=checkbox]{
+    margin: 0 auto;
+    float: right;
+    margin-top: 10px;
+}
+label[for=conditions]{
+    float: right;
+    margin-top: 10px;
+}
+fieldset{
+    /*http://colorzilla.com/gradient-editor/#fefefd+0,dce3c4+42,aebf76+100;Olive+3D+%231*/
+    background: #fefefd; /* Old browsers */
+    background: -moz-linear-gradient(top, #fefefd 100%, #c2cccc 42%, rgba(194, 204, 204, 0.09) 0%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fefefd 0%, #c2cccc 42%, rgba(181, 156, 191, 0.05) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fefefd 0%, #c2cccc 42%, rgba(92, 97, 97, 0.08) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefd', endColorstr='#aebf76',GradientType=0 );
+    background-color: #c2cccc;
+    box-shadow: 7px 7px 7px #4c5940;
+    border-radius:7px 7px 7px 7px;
+}
+input[type=submit]{
+    font-size: 1.2rem;
+    background-color: #7368fd;
+    /*margin-left: 50px;*/
+    margin: 15px;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 5px 5px 5px #4c5940;
+    height: 40px;
+    max-width: 200px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: #c2cccc;
+    color: white;
+}
+input[type=submit]:active{
+    background-color: #7368fd;
+    color: white;
+}
+legend{
+    border-radius: 7px 7px 7px 7px;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+label[for=nom]:after{
+    content: " *Champ obligatoire*";
+    color: red;
+}
+
+input:invalid{
+    border: 3px solid #fd1408;
+    border-radius: 7px 7px 7px 7px;
 }
 
 
