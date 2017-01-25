@@ -7,8 +7,6 @@
  */
 require_once 'defines.php';
 $page_title = 'details';
-?>
-<?php
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
@@ -58,58 +56,61 @@ if($en_reception && empty($villes)){
 }
 
 
-
-
 ?>
 
-<main>
+<div class="container">
+    <section class="main row">
     <h2>Présentez vous</h2>
     <form id="formulaire" action="<?= basename(__FILE__) ?>" method="post">
-        <div class="<?= $nom_valide ? '' : 'invalid' ?>">
-            <label for="saisie_nom">Nom : </label>
-            <input type="text" placeholder="(entrez votre nom)" id="saisie_nom" name="saisie_nom" value="<?= $nom ?>"/>
+        <fieldset class="row col-12">
+            <legend class="col-12 col-m-12">Présentez vous</legend>
+        <div class= "row col-12 <?= $nom_valide ? '' : 'invalid' ?>">
+            <label class="col-6 col-m-12" for="saisie_nom">Nom : </label>
+            <input class="col-6 col-m-12" type="text" placeholder="(entrez votre nom)" id="saisie_nom" name="saisie_nom" value="<?= $nom ?>"/>
             <?php if ( ! $nom_valide) { ?>
-                <p>Le nom doit contenir au moins deux caractères.</p>
+                <div class= "row col-12"><p>Le nom doit contenir au moins deux caractères.</p></div>
             <?php } ?>
         </div>
-        <div class="<?= $prenom_valide ? '' : 'invalid' ?>">
-            <label for="saisie_prenom">Prénom : </label>
-            <input type="text" placeholder="(entrez votre prénom)" id="saisie_prenom" name="saisie_prenom" value="<?= $prenom ?>"/>
+        <div class= "row col-12 <?= $prenom_valide ? '' : 'invalid' ?>">
+            <label class="col-6 col-m-12" for="saisie_prenom">Prénom </label>
+            <input class="col-6 col-m-12" type="text" placeholder="(entrez votre prénom)" id="saisie_prenom" name="saisie_prenom" value="<?= $prenom ?>"/>
             <?php if ( ! $prenom_valide) { ?>
-                <p>Le prénom doit contenir 2 caractères minimum, le premier étant un caractère majuscule.</p>
+                <div class= "row col-12"><p>Le prénom doit contenir 2 caractères minimum.</p></div>
             <?php } ?>
         </div>
         <div class="<?= $email_valide ? '' : 'invalid' ?>">
-            <label for="saisie_email">Courriel : </label>
-            <input type="text" placeholder="(entrez votre courriel)" id="saisie_email" name="saisie_email" value="<?= $email ?>"/>
+            <label class="col-6 col-m-12" for="saisie_email">Courriel : </label>
+            <input class="col-6 col-m-12" type="text" placeholder="(entrez votre courriel)" id="saisie_email" name="saisie_email" value="<?= $email ?>"/>
             <?php if ( ! $email_valide) { ?>
-                <p>L'adresse courriel n'est pas valide.</p>
+                <div class= "row col-12"><p>L'adresse courriel n'est pas valide.</p></div>
             <?php } ?>
         </div>
-        <div class="<?= $villes_valide ? '' : 'invalid' ?>">
-            <label for="ville_mtl">Montreal : </label>
-            <input type="checkbox" id="ville_mtl" name="villes[]" value="ville_mtl"
+        <div class="row col-12 <?= $villes_valide ? '' : 'invalid' ?>">
+            <label class="col-1 col-m-12" for="ville_mtl">Montreal : </label>
+            <input class="col-1 col-m-12" type="checkbox" id="ville_mtl" name="villes[]" value="ville_mtl"
                 <?= array_key_exists('villes', $_POST) && in_array('ville_mtl', $_POST['villes']) ? 'checked="checked"' : ''?>
-            />
-            <label for="ville_qbc">Quebec : </label>
-            <input type="checkbox" id="ville_qbc" name="villes[]" value="ville_qbc"
+            /></br>
+            <label class="col-1 col-m-12" for="ville_qbc">Quebec : </label>
+            <input class="col-1 col-m-12" type="checkbox" id="ville_qbc" name="villes[]" value="ville_qbc"
                 <?= array_key_exists('villes', $_POST) && in_array('ville_qbc', $_POST['villes']) ? 'checked="checked"' : ''?>
             />
-            <label for="ville_shrbk">Sherbrook : </label>
-            <input type="checkbox" id="ville_shrbk" name="villes[]" value="ville_shrbk"
+            <label class="col-1 col-m-12" for="ville_shrbk">Sherbrook : </label>
+            <input class="col-1 col-m-12" type="checkbox" id="ville_shrbk" name="villes[]" value="ville_shrbk"
                 <?= array_key_exists('villes', $_POST) && in_array('ville_shrbk', $_POST['villes']) ? 'checked="checked"' : ''?>
             />
             <?php if ( ! $villes_valide) { ?>
-                <p>Choisissez au moins une ville</p>
+            <div class= "row col-12"><p>Choisissez au moins une ville</p></div>
             <?php } ?>
         </div>
         <div>
             <input type="submit" value="Soumettre"/>
 
         </div>
+        </fieldset>
+    </section>
 
 
-</main>
+</div>
 
 
 <?php
