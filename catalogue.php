@@ -1,6 +1,7 @@
 <?php
 /** Initialisation du panier */
-session_start();
+require_once 'check_connect.php';
+
 /* Initialisation du panier */
 $_SESSION['panier'] = array();
 
@@ -21,11 +22,11 @@ $categories = get_categories();
 //$array[] = array('d'=>4);
 //print_r($array);
 
-?>
-<?php
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
+
+
 
 ?>
 <main>

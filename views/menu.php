@@ -7,11 +7,11 @@
  */
 ?>
 
-<div id="" class="">
+<!--<div id="" class="">-->
     <div class="container">
         <div class="row"><!-- section menu-->
 
-                <div id="menu" class="responsive-menu col-7">
+                <div id="menu" class="col-9">
                     <ul>
                         <li class="<?php if($page_title== 'Accueil'){
                             echo 'active'; } ?> "><a href="index.php">Index</a></li>
@@ -29,7 +29,8 @@
                         <a href="catalogue.php"><img class="col-2" src="images/loupe.svg" alt="loupe"></a>
                     </form>
                 </div>
-            </div>
+
+
         </div><!--fin section menu-->
     </div><!--fin container-->
-</div>
+<!--</div>-->

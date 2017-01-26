@@ -82,9 +82,7 @@ p{
 
 
 /*     --------------------------------------     sous menu    ------------------------------------     */
-.icon{
-    padding: 10px;
-}
+
 #sub_menu{
     background-color: gray;
     position: fixed;
@@ -106,7 +104,7 @@ input[type="search"] {
     color: #999;
     font-size: 0.8rem;
     padding-left: 3%;
-    border: none;
+    border-radius: 7px 7px 7px 7px;
     position: relative;
     margin-left: 2%;
 }
@@ -116,10 +114,10 @@ form#search_mini_form {
 img[alt=loupe]{
     font-size: 2rem;
     position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 45px;
+    width: 60px;
+    height: 60px;
     margin: 0.1% 0 0 -1.4%;
+
 }
 
 #sub_menu a{
@@ -169,51 +167,28 @@ form{
     width: 60%;
     margin: 0 auto;
 }
-label, input[type=text], #is_email, input[type=tel], input[type=file], input[type=number]{
+label, input[type=text], #is_email, input[type=tel], input[type=file], input[type=number],input[type=password]{
     color: black;
     font-size: 0.8rem;
     /*font-weight: bold;*/
     border-radius: 7px 7px 7px 7px;
-    /*margin-left: 50px;*/
     margin-top: 10px;
     height: 30px;
     width: 250px;
     letter-spacing: inherit;
 }
-input[type=text], #is_email, input[type=tel], input[type=file], input[type=number]{
+input[type=text], #is_email, input[type=tel], input[type=file], input[type=number],input[type=password]{
     box-shadow: 7px 7px 7px #4c5940;
-}
-label[for=produits_dispo]{
-    /*margin-left: 50px;*/
-    margin-top: 10px;
-}
-#autres_pd{
-    width: 250px;
-    box-shadow: 7px 7px 7px #4c5940;
-    border-radius: 7px 7px 7px 7px;
-}
-label[for=gift], label[for=perso]{
-    /*margin-left: 50px;*/
-    /*margin-top: 10px;*/
 }
 
-select[name=autres_pd]{
-    /*margin-left: 50px;*/
-    margin-top: 10px;
-    height: 30px;
-    width: 80px;
-    box-shadow: 7px 7px 7px #4c5940;
-}
+
 
 input[type=checkbox]{
     margin: 0 auto;
     float: right;
     margin-top: 10px;
 }
-label[for=conditions]{
-    float: right;
-    margin-top: 10px;
-}
+
 fieldset{
     /*http://colorzilla.com/gradient-editor/#fefefd+0,dce3c4+42,aebf76+100;Olive+3D+%231*/
     background: #fefefd; /* Old browsers */
@@ -227,7 +202,7 @@ fieldset{
 }
 input[type=submit]{
     font-size: 1.2rem;
-    background-color: #7368fd;
+    background-color: white;
     /*margin-left: 50px;*/
     margin: 15px;
     border-radius: 7px 7px 7px 7px;
@@ -241,7 +216,7 @@ input[type=submit]:hover{
     color: white;
 }
 input[type=submit]:active{
-    background-color: #7368fd;
+    background-color: red;
     color: white;
 }
 legend{
@@ -493,7 +468,7 @@ article.articles_items.col-9 {
     padding: 2% 0 2% 0;
     color: #9d9995;
     text-transform: uppercase;
-    background-color: lavender;
+    background-color: grey;
 
 }
 
