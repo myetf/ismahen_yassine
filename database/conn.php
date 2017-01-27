@@ -1,10 +1,5 @@
 <?php
 // Connection
-// Constantes rassemblant les infos de connexion et de schéma de la DB
-define('CONN_HOST', '127.0.0.1');
-define('CONN_USER', 'fol');
-define('CONN_PWD', 'u3ubuma3u');
-define('DBNAME', 'izaitere_fol');
 
 $mysqli = new mysqli(CONN_HOST, CONN_USER, CONN_PWD, DBNAME);
 if ($mysqli->connect_errno) {
