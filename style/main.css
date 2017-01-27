@@ -160,6 +160,75 @@ img[alt=loupe]{
     background-color:red;
 }
 
+/*------------------------------------------------- index new ----------------------------------------------*/
+#fig1{
+    display: block;
+    margin: 20px;
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+
+#fig1 h1{
+    position:absolute;
+    background-color:#000;
+    font-size:50px;
+    padding:5px;
+    margin:0;
+    color:#FFF;
+    top:20px;
+    left:20px;
+}
+
+#fig1 #infos dt{
+
+    position:absolute;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-weight:bold;
+    font-size:100px;
+    color:red;
+    z-index:1;
+}
+#fig1 #infos #infos1 {
+    top:160px;
+    left:60px;
+}
+
+
+#fig1 #infos dd a span{
+    line-height:30px;
+    font-size:20px;
+    color:#fff;
+    background: rgba(0,0,0,.6);
+    border:1px solid #000;
+    padding:5px 5px 5px 30px;
+    display:none;
+}
+
+#fig1 #infos dd a:hover span {
+    display:block;
+}
+
+#fig1 #infos dd a{
+    width:150px;
+    height:50px;
+    position:absolute;
+    z-index:2;
+}
+
+#fig1 #infos #infos1_exp a{
+    top:160px;
+    left:60px;
+}
+
+
+
+
+
+
 
 /*------------------------------------------------- FORMULAIRE  ismahen  ----------------------------------------------*/
 form{
