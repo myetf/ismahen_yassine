@@ -5,11 +5,15 @@
  * Date: 2017-01-25
  * Time: 12:56
  */
+if(isset($_POST['logout_btn']) && is_logged_in()){
+    $_SESSION['rang']=-1;
+    }
 ?>
+<?php if ((is_logged_in())&&(array_key_exists('rang', $_SESSION))&&($_SESSION['rang']==0)){?><a href="control.php"><button id="controlroom" >Control</button></a><?php }?>
 <?php if (is_logged_in()) { ?>
     <span>Salut <?= $_SESSION[PS_USERNAME] ?> ! </span>
     <form name="logout" method="post">
-        <input type="submit" name="logout_btn" value="Déconnecter" />
+        <input type="submit" name="logout_btn" value="Deconnecter" />
     </form>
 <?php } else { ?>
     <form name="login" method="post">

@@ -16,7 +16,7 @@
 <script src="script/lightbox.js"></script>
 <script src="script/remodal.js"></script>
 <body>
-<h1><?php echo is_logged_in() ? 'Déconnexion' : 'Connexion'; ?></h1>
+<h4><?php echo is_logged_in() ? 'Déconnexion' : 'Connexion'; ?></h4>
 <?php
 require 'views/login_out_form.php';
 ?>

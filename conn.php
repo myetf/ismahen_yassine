@@ -4,7 +4,7 @@
 define('CONN_HOST', '127.0.0.1');
 define('CONN_USER', 'root');
 define('CONN_PWD', '');
-define('DBNAME', 'yassine88');
+define('DBNAME', 'projet');
 
 $mysqli = new mysqli(CONN_HOST, CONN_USER, CONN_PWD, DBNAME);
 if ($mysqli->connect_errno) {
@@ -17,7 +17,7 @@ if ($mysqli->connect_errno) {
  * @param bool $cat_id
  * @return array
  */
-function get_article_list($cat_id=false) {
+function get_articles_list($cat_id=false) {
     global $mysqli;
 // Sélectionner tous les articles (toutes les colonnes)
     $queryStr = 'SELECT * FROM article';
@@ -36,7 +36,26 @@ function get_article_list($cat_id=false) {
     };
     return $resultat;
 }
-
+function get_user_list($cat_id=false) {
+    global $mysqli;
+// Sélectionner tous les articles (toutes les colonnes)
+    $queryStr = 'SELECT * FROM user';
+    // Si la catégorie est précisée, on ajoute une clause WHERE dans la requête
+    if (false !== $cat_id) {
+        $queryStr .= " WHERE `id` = " . $mysqli->real_escape_string($cat_id);
+    }
+// Execution de la requête (un select)
+    $res = $mysqli->query($queryStr);
+// Récupération des données
+    $resultat = array();
+    if ($res && ($res->num_rows > 0)) {
+        while ($user = $res->fetch_assoc()) {
+            $resultat[$user['id']] = $user;
+        };
+    };
+    return $resultat;
+};
+$users=get_user_list();
 /**
  * Fournit un article de la table article à partir de son id
  * @param int $id
@@ -87,3 +106,30 @@ if ($res) {
     $resultat_insertion = $mysqli->insert_id;
 };
 var_dump($resultat_insertion);*/
+//formulaire modification
+
+//require(dirname(__FILE__).'/../config/global.php');
+//
+//// On récupère l'action à effectuer (Create, Read, Update ou Delete).
+//// Je compte sur vous pour utiliser un système plus perfectionné que ça. ^^
+//$action = 'read';
+//if(isset($_GET['action']) && in_array($_GET['action'], array('create', 'read', 'update', 'delete')))
+//{
+//    $action = $_GET['action'];
+//}
+//
+///* Nous ferons ici les traitements concernant la page. */
+//switch($action)
+//{
+//    case 'read':
+//        break;
+//    case 'create':
+//        break;
+//    case 'update':
+//        break;
+//    case 'delete':
+//        break;
+//}
+//
+///* Nous appellerons ici la page HTML appropriée. */
+//include(HTML_DIR.$action.'.php');

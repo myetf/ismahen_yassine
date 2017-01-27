@@ -1,18 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: izaitere
- * Date: 2017-01-25
- * Time: 13:04
- */
+
 
 require_once 'user_authenticate.php'; //code pour authentification
 define('PS_USERNAME','ps_username');
 session_start(); //demarrage session
-/**
- * indique si l utilisateur est connecte ou pas
- * @return bool
- */
+
 
 function is_logged_in(){
     return (array_key_exists(PS_USERNAME,$_SESSION) && ! empty($_SESSION[PS_USERNAME]));

@@ -106,7 +106,7 @@ input[type="search"] {
     color: #999;
     font-size: 0.8rem;
     padding-left: 3%;
-    border: none;
+    border-radius: 7px 7px 7px 7px;
     position: relative;
     margin-left: 2%;
 }
@@ -116,10 +116,10 @@ form#search_mini_form {
 img[alt=loupe]{
     font-size: 2rem;
     position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 45px;
+    width: 60px;
+    height: 60px;
     margin: 0.1% 0 0 -1.4%;
+
 }
 
 #sub_menu a{
@@ -169,7 +169,7 @@ form{
     width: 60%;
     margin: 0 auto;
 }
-label, input[type=text], #is_email, input[type=tel], input[type=file], input[type=number]{
+label, input[type=text], #is_email, input[type=tel], input[type=file], input[type=number],input[type=password]{
     color: black;
     font-size: 0.8rem;
     /*font-weight: bold;*/
@@ -180,7 +180,7 @@ label, input[type=text], #is_email, input[type=tel], input[type=file], input[typ
     width: 250px;
     letter-spacing: inherit;
 }
-input[type=text], #is_email, input[type=tel], input[type=file], input[type=number]{
+input[type=text], #is_email, input[type=tel], input[type=file], input[type=number],input[type=password]{
     box-shadow: 7px 7px 7px #4c5940;
 }
 label[for=produits_dispo]{
@@ -227,7 +227,7 @@ fieldset{
 }
 input[type=submit]{
     font-size: 1.2rem;
-    background-color: #7368fd;
+    background-color: white;
     /*margin-left: 50px;*/
     margin: 15px;
     border-radius: 7px 7px 7px 7px;
@@ -241,7 +241,7 @@ input[type=submit]:hover{
     color: white;
 }
 input[type=submit]:active{
-    background-color: #7368fd;
+    background-color: red;
     color: white;
 }
 legend{
@@ -263,7 +263,16 @@ input:invalid{
     border-radius: 7px 7px 7px 7px;
 }
 
-
+#controlroom {
+    display: block;
+    line-height: 40px;
+    color:#fff;
+    height: 40px;
+    background-color: gray;
+    text-align:center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
 
 /*     -------------------------------------- Catalgoue ---------------------------------------------*/
 .btn_detail{
@@ -493,7 +502,7 @@ article.articles_items.col-9 {
     padding: 2% 0 2% 0;
     color: #9d9995;
     text-transform: uppercase;
-    background-color: lavender;
+    background-color: grey;
 
 }
 

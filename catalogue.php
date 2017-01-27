@@ -1,6 +1,7 @@
 <?php
 /** Initialisation du panier */
-session_start();
+require_once 'check_connect.php';
+
 /* Initialisation du panier */
 $_SESSION['panier'] = array();
 
@@ -10,23 +11,20 @@ require_once 'defines.php';
 //include 'user_data.php';
 $page_title = 'Catalogue';
 //$categorie = '';
-$articles = get_article_list();
-// Sélectionner tous les items d'une catégorie en particulier
-$articles_cat2 = get_article_list(2);
-// Sélectionner toutes les catégories de articles
-$categories = get_categories();
+$articles = get_articles_list();
+
 
 //$categorie=$_GET['categorie'];
 //$array = array('a'=>1, 'b'=>2, 'c'=>3);
 //$array[] = array('d'=>4);
 //print_r($array);
 
-?>
-<?php
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
 
+
+var_dump($_SESSION['rang']);
 ?>
 <main>
 
@@ -59,7 +57,7 @@ require_once 'views/aside.php';
                             <div>
                                 <h2 id="modal<?= $article['id'] ?>Title"><?= $article['nom'] ?></h2>
                                 <p id="modal<?= $article['id'] ?>Desc">
-                                    Combien d'article désirez vous?
+                                    Désirez vous prendre cet article?
                                 </p>
                             </div>
                             <br>

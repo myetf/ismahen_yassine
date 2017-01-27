@@ -21,6 +21,7 @@
                             echo 'active'; } ?>"><a href="details.php">Détails</a></li>
                         <li class="<?php if ($page_title == 'Contact'){
                             echo 'active'; } ?>"><a href="contact.php">Contact</a></li>
+
                     </ul>
                 </div>
                 <div class="search col-3 col-m-3">

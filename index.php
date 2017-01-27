@@ -45,9 +45,10 @@ include 'user_data.php';
 
             </div><!--fin produits vedette-->
             </section>
+
             <!--   -------------------------------------------------------------  section main (new prod)  -->
 
-            <section class="cat_articles row col-10">
+            <section class="container cat_articles row col-10">
                 <div class="row">
                 <article class="articles_items col-4 col-m-12">
                     <ul>
