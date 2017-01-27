@@ -6,7 +6,7 @@ require_once 'check_connect.php';
 $_SESSION['panier'] = array();
 
 
-require_once('conn.php');
+require_once('database/conn.php');
 require_once 'defines.php';
 //include 'user_data.php';
 $page_title = 'Catalogue';
