@@ -1,4 +1,5 @@
 <?php
+require_once('conn.php');
 require_once 'defines.php';
 $page_title = 'Contact';
 ?>
@@ -15,6 +16,7 @@ require_once 'views/aside.php';
     https://www.google.ca/maps/place/3485+Avenue+Papineau,+Montr%C3%A9al,+QC+H2K+4J7/@45.5287561,-73.5677251,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bc7394ced29:0x648843a0af1f2ee2!8m2!3d45.5287524!4d-73.5655364
 </main>
 <?php
+
 require_once 'views/footer.php';
 ?>
 </body>
