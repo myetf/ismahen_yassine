@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2017 at 04:18 PM
+-- Generation Time: Jan 31, 2017 at 03:28 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -59,8 +59,16 @@ INSERT INTO `article` (`id`, `nom`, `categorie`, `genre`, `prix`, `description`,
 (3, 'Veste Grise', 'Veste', 'feminin', '34.99', 'Toujours au chaud!', 'blouson.jpeg'),
 (4, 'Veste Jean', 'Veste', 'feminin', '27.99', 'Elegance en marche', 'blouson2.jpeg'),
 (6, 'Jean Couleur Claire', 'Jean', 'feminin', '14.99', 'Ideal pour tout', 'jean2.jpeg'),
-(7, 'Jean Fuseau', 'Jean', 'feminin', '24.99', 'Ideal pour tout genre de sortie', 'jean3.jpeg'),
-(10, 'Tshirt Brooklyn', 'Pull', 'feminin', '15.99', 'Ideal pour sortie', 'tshirt.jpeg');
+(7, 'Jean Fusuao', 'Jean', 'feminin', '24.99', 'Parfait', 'jean3.jpeg'),
+(17, 'trefle feuille', 'Pull', 'male', '1897', 'itreza', 'photo1.jpeg'),
+(18, 'jupe dezni', 'Jupe', 'feminin', '14.99', 'JUpe style', 'photo2.jpeg'),
+(19, 'Chimisier', 'Haut', 'feminin', '17.99', 'Haut chemisier', 'haut.jpeg'),
+(20, 'Pull de Sport', 'Pull', 'feminin', '17.99', 'Sport pour pull', 'photo3.jpeg'),
+(21, 'jean Zlin', 'Jean', 'feminin', '18.99', 'C\'est un jean', 'photo4.jpeg'),
+(22, 'Jean Fuzlo', 'Pull', 'feminin', '14.59', 'Soiree partout', 'photo5.jpeg'),
+(24, 'Jean Derick', 'Jean', 'male', '14.58', 'Fais pour ca', 'photo6.jpeg'),
+(25, 'Artisan', 'Jupe', 'male', '14.99', 'Ecossais', 'photo7.jpeg'),
+(28, 'Yarli', 'Pull', 'male', '17.99', 'Excellent Pull', 'photo8.jpeg');
 
 -- --------------------------------------------------------
 
@@ -84,19 +92,12 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `mail`, `tagname`, `rang`) VALUES
 (0, 'Administrateur', '372eeffaba2b5b61fb02513ecb84f1ff', 'isimaster@isi.tn', 'Administrateur', 0),
 (2, 'Yassine', '5bfe0c405c67de32b1de9ea40d093666', 'yassine@gmail.com', 'myetf', 1),
-(3, 'Ismahene', 'c7e411e7a0a9ef48cd226bacbf142c47', 'ismahene@gmail.com', 'ismahene', 1);
+(3, 'Ismahene', 'c7e411e7a0a9ef48cd226bacbf142c47', 'ismahene@gmail.com', 'ismahene', 1),
+(9, 'gillespenissar', '372eeffaba2b5b61fb02513ecb84f1ff', 'gille@isi.com', 'gillespenissard', 1);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `achat`
---
-ALTER TABLE `achat`
-  ADD PRIMARY KEY (`achat_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `article_id` (`article_id`);
 
 --
 -- Indexes for table `article`
@@ -115,31 +116,15 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `achat`
---
-ALTER TABLE `achat`
-  MODIFY `achat_id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `achat`
---
-ALTER TABLE `achat`
-  ADD CONSTRAINT `achat_ibfk_1` FOREIGN KEY (`article_id`) REFERENCES `article` (`id`),
-  ADD CONSTRAINT `user_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -76,6 +76,21 @@ function get_article($id) {
     };
     return $resultat;
 }
+function get_user($id) {
+    global $mysqli;
+// Sélectionner tous les articles (toutes les colonnes)
+    $queryStr = 'SELECT * FROM user WHERE `id` = ' . $mysqli->real_escape_string($id);
+// Execution de la requête (un select)
+    $res = $mysqli->query($queryStr);
+// Récupération des données
+    $resultat = null;
+    if ($res && ($res->num_rows > 0)) {
+        while ($user = $res->fetch_assoc()) {
+            $resultat = $user;
+        };
+    };
+    return $resultat;
+}
 
 /**
  * Fournit toutes les catégories de articles enregistrées dans la table article_category
@@ -84,7 +99,7 @@ function get_article($id) {
 function get_categories() {
     global $mysqli;
 // Sélectionner toutes les categories (toutes les colonnes)
-    $queryStr = 'SELECT * FROM article_category';
+    $queryStr = 'SELECT categorie FROM article';
 // Execution de la requête (un select)
     $res = $mysqli->query($queryStr);
 // Récupération des données
@@ -96,6 +111,43 @@ function get_categories() {
     };
     return $resultat;
 }
+function ajout_data($a,$b,$c,$d,$e,$f){
+    global $mysqli;
+    $queryString="INSERT INTO article('nom','categorie','genre','prix','description','image') VALUES($a,$b,$c,$d,$e,$f)";
+    $res = $mysqli->query($queryString);
+// Est-ce que la requète a bien marché ?
+    $resultat_insertion = false;
+    if ($res) {
+        $resultat_insertion = $mysqli->insert_id;
+    };
+    var_dump($resultat_insertion);
+
+}
+function ajout_user($a,$b,$c,$d,$e)
+{
+    global $mysqli;
+    $queryString = "INSERT INTO ('username','password','mail','tagname','rang') VALUES($a,$b,$c,$d,$e)";
+    $res = $mysqli->query($queryString);
+// Est-ce que la requète a bien marché ?
+    $resultat_insertion = false;
+    if ($res) {
+        $resultat_insertion = $mysqli->insert_id;
+    };
+    var_dump($resultat_insertion);
+
+}
+function ajout(){
+    if(array_key_exists('form1',$_POST)||array_key_exists('form2',$_POST))
+    {
+        if(array_key_exists('form1',$_POST)){
+           ajout_data($_POST['nom'],$_POST['categorie'],$_POST['genre'],$_POST['prix'],$_POST['description'],$_POST['image']);
+           unset($_POST['form1']);
+        }else{
+            ajout_user($_POST['username'],md5($_POST['password']),$_POST['mail'],$_POST['tagname'],$_POST['rang']);
+            unset($_POST['form2']);
+        }
+    }}
+
 
 // Ajouter un enregistrement
 /*$queryString = "INSERT INTO ma_table (nom,age) VALUES ('from php', 44)";
